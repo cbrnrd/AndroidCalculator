@@ -1,0 +1,10 @@
+<application>
+  <component name="FindRecents">
+    <findStrings>
+      <find>button3</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>button9</replace>
+    </replaceStrings>
+  </component>
+</application>
