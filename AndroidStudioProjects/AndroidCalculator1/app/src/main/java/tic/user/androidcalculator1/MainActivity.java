@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         Button buttonMult = (Button) findViewById(R.id.buttonMult);
         Button buttonDiv = (Button) findViewById(R.id.buttonDiv);
         Button buttonEquals = (Button) findViewById(R.id.buttonEquals);
-
+        int test = 5;
+        test += 1337;
 
 
     }
