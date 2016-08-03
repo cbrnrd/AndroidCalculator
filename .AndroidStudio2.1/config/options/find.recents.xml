@@ -2,9 +2,11 @@
   <component name="FindRecents">
     <findStrings>
       <find>button3</find>
+      <find>px</find>
     </findStrings>
     <replaceStrings>
       <replace>button9</replace>
+      <replace>dp</replace>
     </replaceStrings>
   </component>
 </application>
