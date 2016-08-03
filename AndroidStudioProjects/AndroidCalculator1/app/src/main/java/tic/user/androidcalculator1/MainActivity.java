@@ -4,11 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     String first;
     String second;
     String operation;
+    TextView tv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         int buttonEqualsint;
         int buttonClearint;
 
+
         Button button0 = (Button) findViewById(R.id.button0);
         Button button1 = (Button) findViewById(R.id.button1);
         Button button2 = (Button) findViewById(R.id.button2);
@@ -50,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         Button buttonDiv = (Button) findViewById(R.id.buttonDiv);
         Button buttonEquals = (Button) findViewById(R.id.buttonEquals);
         Button buttonClear = (Button) findViewById(R.id.buttonClear);
+
+        tv = (TextView) findViewById(R.id.textView);
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -191,6 +197,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
     public void setNumber(String s){
         if (operation.equals("")){
@@ -199,5 +207,9 @@ public class MainActivity extends AppCompatActivity {
         else{
             second += s;
         }
+    }
+
+    public void numView(String i){
+     tv.setText(i);
     }
 }
