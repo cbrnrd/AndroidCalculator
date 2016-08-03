@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         int buttonMultint;
         int buttonDivint;
         int buttonEqualsint;
+        int buttonClearint;
 
         Button button0 = (Button) findViewById(R.id.button0);
         Button button1 = (Button) findViewById(R.id.button1);
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonMult = (Button) findViewById(R.id.buttonMult);
         Button buttonDiv = (Button) findViewById(R.id.buttonDiv);
         Button buttonEquals = (Button) findViewById(R.id.buttonEquals);
+        Button buttonClear = (Button) findViewById(R.id.buttonClear);
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -176,6 +178,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 operation = "";
                 first = String.valueOf(result);
+                second = "";
+
+            }
+        });
+        buttonClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                operation = "";
+                first = "";
                 second = "";
 
             }
