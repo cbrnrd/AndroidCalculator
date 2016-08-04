@@ -4,6 +4,8 @@
       <find>button3</find>
       <find>px</find>
       <find>%</find>
+      <find>intent</find>
+      <find>startA</find>
     </findStrings>
     <replaceStrings>
       <replace>button9</replace>

@@ -1,5 +1,6 @@
 package tic.user.androidcalculator1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,9 +41,10 @@ public class MainActivity extends AppCompatActivity {
         Button buttonDiv = (Button) findViewById(R.id.buttonDiv);
         Button buttonEquals = (Button) findViewById(R.id.buttonEquals);
         Button buttonClear = (Button) findViewById(R.id.buttonClear);
-        Button buttonSqrt = (Button) findViewById(R.id.buttonSqrt);
+        Button buttonMore = (Button) findViewById(R.id.buttonMore);
 
         tv = (TextView) findViewById(R.id.textView);
+        numView("0");
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,29 +127,42 @@ public class MainActivity extends AppCompatActivity {
         buttonPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                operation = "plus";
+                if(first.equals("")) {
 
+                }else{
+                    operation = "plus";
+                }
             }
         });
         buttonMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                operation = "minus";
 
+                if(first.equals("")){
+
+                }else {
+                    operation = "minus";
+                }
             }
         });
         buttonMult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                operation = "mult";
+                if(first.equals("")){
 
+                }else {
+                    operation = "mult";
+                }
             }
         });
         buttonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                operation = "div";
+                if(first.equals("")){
 
+                }else {
+                    operation = "div";
+                }
             }
         });
         buttonEquals.setOnClickListener(new View.OnClickListener() {
@@ -166,8 +181,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if(operation.equals("div")){
                     result = result / Double.parseDouble(second);
-                }
-                else{
+                }else{
                     //operation hasn't been chosen, result will stay the same
                 }
 
@@ -189,16 +203,22 @@ public class MainActivity extends AppCompatActivity {
                 operation = "";
                 first = "";
                 second = "";
-                numView(first);
+                numView("0");
             }
         });
-        buttonSqrt.setOnClickListener(new View.OnClickListener() {
+        buttonMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (operation == "sqrt"){
-                    Math.sqrt(Double.parseDouble(first));
-                    numView(first);  //TODO idk
-                }
+
+                Intent moreScreen = new Intent(MainActivity.this, MoreScreen.class);
+
+                //passes info to other intent
+                moreScreen.putExtra("operation",operation);
+                moreScreen.putExtra("first", first);
+                moreScreen.putExtra("second", second);
+
+                startActivity(moreScreen);
+               // operation = "more";
 
             }
         });
