@@ -18,23 +18,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int button0int;
-        int button1int;
-        int button2int;
-        int button3int;
-        int button4int;
-        int button5int;
-        int button6int;
-        int button7int;
-        int button8int;
-        int button9int;
-        int buttonPlusint;
-        int buttonPointint;
-        int buttonMinusint;
-        int buttonMultint;
-        int buttonDivint;
-        int buttonEqualsint;
-        int buttonClearint;
+        operation = "";
+        first = "";
+        second = "";
 
 
         Button button0 = (Button) findViewById(R.id.button0);
@@ -61,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 setNumber("0");
+
 
             }
         });
@@ -182,10 +169,15 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     //operation hasn't been chosen, result will stay the same
                 }
+
+                if(result % 1 == 0){
+                    result = (int) result;
+                }
+
                 operation = "";
                 first = String.valueOf(result);
                 second = "";
-
+                numView(first);
             }
         });
         buttonClear.setOnClickListener(new View.OnClickListener() {
@@ -194,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
                 operation = "";
                 first = "";
                 second = "";
+                numView(first);
 
             }
         });
@@ -203,9 +196,11 @@ public class MainActivity extends AppCompatActivity {
     public void setNumber(String s){
         if (operation.equals("")){
             first += s;
+            numView(first);
         }
         else{
             second += s;
+            numView(second);
         }
     }
 
