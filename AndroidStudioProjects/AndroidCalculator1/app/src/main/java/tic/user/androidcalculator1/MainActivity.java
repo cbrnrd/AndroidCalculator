@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonDiv = (Button) findViewById(R.id.buttonDiv);
         Button buttonEquals = (Button) findViewById(R.id.buttonEquals);
         Button buttonClear = (Button) findViewById(R.id.buttonClear);
+        Button buttonSqrt = (Button) findViewById(R.id.buttonSqrt);
 
         tv = (TextView) findViewById(R.id.textView);
 
@@ -170,12 +171,14 @@ public class MainActivity extends AppCompatActivity {
                     //operation hasn't been chosen, result will stay the same
                 }
 
-                if(result % 1 == 0){
-                    result = (int) result;
+                if(result % 1 == .0){
+                    first = String.valueOf((int) result);
+
+                }else{
+                    first = String.valueOf(result);
                 }
 
                 operation = "";
-                first = String.valueOf(result);
                 second = "";
                 numView(first);
             }
@@ -187,6 +190,15 @@ public class MainActivity extends AppCompatActivity {
                 first = "";
                 second = "";
                 numView(first);
+            }
+        });
+        buttonSqrt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (operation == "sqrt"){
+                    Math.sqrt(Double.parseDouble(first));
+                    numView(first);  //TODO idk
+                }
 
             }
         });

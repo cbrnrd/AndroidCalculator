@@ -3,6 +3,7 @@
     <findStrings>
       <find>button3</find>
       <find>px</find>
+      <find>%</find>
     </findStrings>
     <replaceStrings>
       <replace>button9</replace>
