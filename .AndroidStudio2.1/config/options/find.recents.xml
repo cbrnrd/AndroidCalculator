@@ -6,10 +6,13 @@
       <find>%</find>
       <find>intent</find>
       <find>startA</find>
+      <find>bundle</find>
+      <find>buttonPlus</find>
     </findStrings>
     <replaceStrings>
       <replace>button9</replace>
       <replace>dp</replace>
+      <replace>buttonSqrt</replace>
     </replaceStrings>
   </component>
 </application>

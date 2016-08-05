@@ -46,6 +46,32 @@ public class MainActivity extends AppCompatActivity {
         tv = (TextView) findViewById(R.id.textView);
         numView("0");
 
+        Bundle passedInfo = getIntent().getExtras();
+        if(passedInfo != null){
+            operation = passedInfo.getString("operation");
+            first = passedInfo.getString("first");
+            second = passedInfo.getString("second");
+            if(operation.equals("")){
+                if(first.equals("")){
+                    numView("0");
+                }
+                else{
+                    numView(first);
+                }
+
+            }
+            else {
+                if(second.equals("")){
+                    numView(first);
+                }
+                else{
+                    numView(second);
+                }
+
+            }
+            // if(passedInfo.getString())
+        }
+
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
