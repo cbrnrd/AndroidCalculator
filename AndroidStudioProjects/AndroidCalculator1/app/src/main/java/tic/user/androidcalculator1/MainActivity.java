@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tv;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         operation = "";
         first = "";
         second = "";
+        final String pi = Double.toString(Math.PI);
 
 
         Button button0 = (Button) findViewById(R.id.button0);
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
             else {
-                if(second.equals("")){
+                if(second.equals("")) {
                     numView(first);
                 }
                 else{
@@ -196,20 +198,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 double result;
                 result = Double.parseDouble(first);
-                if(operation.equals("plus")){
+
+
+                // do all the operations here
+                if (operation.equals("plus")) {
                     result = result + Double.parseDouble(second);
-                }
-                else if(operation.equals("minus")){
+                } else if (operation.equals("minus")) {
                     result = result - Double.parseDouble(second);
-                }
-                else if(operation.equals("mult")){
+                } else if (operation.equals("mult")) {
                     result = result * Double.parseDouble(second);
-                }
-                else if(operation.equals("div")){
+                } else if (operation.equals("div")) {
                     result = result / Double.parseDouble(second);
-                }else{
+                } else if (operation.equals("exp")) {
+                   result = Math.pow(Double.parseDouble(first), Double.parseDouble(second));
+                }
+                 else{
                     //operation hasn't been chosen, result will stay the same
                 }
+
 
                 if(result % 1 == .0){
                     first = String.valueOf((int) result);
@@ -255,6 +261,7 @@ public class MainActivity extends AppCompatActivity {
         if (operation.equals("")){
             first += s;
             numView(first);
+
         }
         else{
             second += s;

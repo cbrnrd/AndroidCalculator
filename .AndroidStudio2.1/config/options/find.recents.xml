@@ -8,6 +8,12 @@
       <find>startA</find>
       <find>bundle</find>
       <find>buttonPlus</find>
+      <find>minus</find>
+      <find>tostring</find>
+      <find>mult</find>
+      <find>add</find>
+      <find>abs</find>
+      <find>sqrt</find>
     </findStrings>
     <replaceStrings>
       <replace>button9</replace>
