@@ -47,23 +47,23 @@ public class MoreScreen extends AppCompatActivity {
         }
 
 
-        Button buttonBack = (Button) findViewById(R.id.buttonBack);
-        Button buttonClear = (Button) findViewById(R.id.buttonClear);
-        Button buttonSqrt = (Button) findViewById(R.id.buttonSqrt);
-        Button buttonPi = (Button) findViewById(R.id.buttonPi);
-        Button buttonMult = (Button) findViewById(R.id.buttonMult);
-        Button buttonDiv = (Button) findViewById(R.id.buttonDiv);
-        Button button0 = (Button) findViewById(R.id.button0);
-        Button button1 = (Button) findViewById(R.id.button1);
-        Button button2 = (Button) findViewById(R.id.button2);
-        Button button3 = (Button) findViewById(R.id.button3);
-        Button button4 = (Button) findViewById(R.id.button4);
-        Button button5 = (Button) findViewById(R.id.button5);
-        Button button6 = (Button) findViewById(R.id.button6);
-        Button button7 = (Button) findViewById(R.id.button7);
-        Button button8 = (Button) findViewById(R.id.button8);
-        Button button9 = (Button) findViewById(R.id.button9);
-        Button buttonPoint = (Button) findViewById(R.id.buttonPoint);
+        Button buttonBack   = (Button) findViewById(R.id.buttonBack);
+        Button buttonClear  = (Button) findViewById(R.id.buttonClear);
+        Button buttonSqrt   = (Button) findViewById(R.id.buttonSqrt);
+        Button buttonPi     = (Button) findViewById(R.id.buttonPi);
+        Button buttonMult   = (Button) findViewById(R.id.buttonMult);
+        Button buttonDiv    = (Button) findViewById(R.id.buttonDiv);
+        Button button0      = (Button) findViewById(R.id.button0);
+        Button button1      = (Button) findViewById(R.id.button1);
+        Button button2      = (Button) findViewById(R.id.button2);
+        Button button3      = (Button) findViewById(R.id.button3);
+        Button button4      = (Button) findViewById(R.id.button4);
+        Button button5      = (Button) findViewById(R.id.button5);
+        Button button6      = (Button) findViewById(R.id.button6);
+        Button button7      = (Button) findViewById(R.id.button7);
+        Button button8      = (Button) findViewById(R.id.button8);
+        Button button9      = (Button) findViewById(R.id.button9);
+        Button buttonPoint  = (Button) findViewById(R.id.buttonPoint);
         Button buttonEquals = (Button) findViewById(R.id.buttonEquals);
 
         button0.setOnClickListener(new View.OnClickListener() {
