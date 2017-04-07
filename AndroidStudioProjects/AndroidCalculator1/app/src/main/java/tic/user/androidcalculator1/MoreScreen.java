@@ -21,7 +21,7 @@ public class MoreScreen extends AppCompatActivity {
 
         tv = (TextView) findViewById(R.id.textView);
         final String pi = Double.toString(Math.PI);
-        Bundle passedInfo = getIntent().getExtras();
+        Bundle passedInfo = getIntent().getExtras();  // Get passed info from other Intent
         if(passedInfo != null){
             operation = passedInfo.getString("operation");
             first = passedInfo.getString("first");
@@ -46,7 +46,9 @@ public class MoreScreen extends AppCompatActivity {
            // if(passedInfo.getString())
         }
 
-
+        /*
+            Define all buttons on screen
+        */
         Button buttonBack   = (Button) findViewById(R.id.buttonBack);
         Button buttonClear  = (Button) findViewById(R.id.buttonClear);
         Button buttonSqrt   = (Button) findViewById(R.id.buttonSqrt);
@@ -152,24 +154,7 @@ public class MoreScreen extends AppCompatActivity {
                     if (first.equals("")) {
 
                     } else {
-                        /*result = Double.parseDouble(first);
-                        if(second.equals("")) {
-                            second = "0";
-
-                            result = Math.pow(Double.parseDouble(first), Double.parseDouble(second));
-                        *//*if (result % 1 == .0) {
-                            first = String.valueOf((int) result);
-
-                        }*//* //else {
-                            first = String.valueOf(result);
-                            //}
-
-                            operation = "";
-                            second = "";
-                            numView(first);*/
                         operation = "exp";
-
-
                     }
                 }
             }
