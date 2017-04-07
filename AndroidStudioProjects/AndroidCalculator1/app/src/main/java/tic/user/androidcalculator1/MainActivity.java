@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         operation = "";
-        first = "";
-        second = "";
+        first     = "";
+        second    = "";
         final String pi = Double.toString(Math.PI);
 
 
@@ -69,94 +69,79 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     numView(second);
                 }
-
             }
-            // if(passedInfo.getString())
         }
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("0");
-
-
             }
         });
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("1");
-
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("2");
-
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("3");
-
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("4");
-
             }
         });
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("5");
-
             }
         });
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("6");
-
             }
         });
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("7");
-
             }
         });
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("8");
-
             }
         });
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber("9");
-
             }
         });
         buttonPoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setNumber(".");
-
             }
         });
         buttonPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(first.equals("")) {
-
                 }else{
                     operation = "plus";
                 }
@@ -216,7 +201,6 @@ public class MainActivity extends AppCompatActivity {
                     //operation hasn't been chosen, result will stay the same
                 }
 
-
                 if(result % 1 == .0){
                     first = String.valueOf((int) result);
 
@@ -254,8 +238,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
     public void setNumber(String s){
         if (operation.equals("")){
